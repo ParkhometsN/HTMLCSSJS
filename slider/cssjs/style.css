@@ -1,0 +1,69 @@
+body{
+    background-color: #2d2d2d;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+main{
+    padding: 3rem;
+}
+
+.slider h1 {
+    font-size: 62px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.slider_container {
+    padding-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    /* overflow: hidden; */
+    position: relative; /* Добавляем позиционирование */
+    transition: left 0.3s ease; /* Плавная анимация */
+}
+
+.block {
+    background-color: aliceblue;
+    border-radius: 1rem;
+    width: 500px;
+    height: 300px;
+    flex: 0 0 auto; /* Убедимся, что блоки не сжимаются */
+    width: 100%; /* Или задайте фиксированную ширину, например, 300px */
+}
+
+.buttons_slider {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider {
+    position: relative;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+
+
+
+
+
+.buttons_slider button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.buttons_slider button:hover {
+    opacity: 0.7;
+}
+
+.buttons_slider button:active {
+    opacity: 0.5;
+}
