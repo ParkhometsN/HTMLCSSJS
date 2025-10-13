@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/st.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <p>Dashboard viget</p>
+            <div class="getviget">
+                <button>Добавить виджет</button>
+            </div>
+        </div>
+        <div class="grid_viget">
+            <div id="weatherviget" class="backround_viget weatherviget">
+                <p style="opacity: 0.4;">сейчас</p>
+                <p style="color: palevioletred;" id="celsi"></p>
+                <div class="f"> <p id="city"> </p></div>
+               <p style="opacity: 0.5;">Ощущается как</p>
+                <p  style="color: palevioletred;" id="feels-like"></p>
+            </div>
+            <div class="backround_viget">
+                <p id="time"></p>
+            </div>
+            <div class="backround_viget">
+                <p>Погода</p>
+            </div>
+            <div class="backround_viget">
+                <p>Погода</p>
+            </div>
+        </div>
+    </div>
+   
+</body>
+<script src="./src/js.js"></script>
+</html>
