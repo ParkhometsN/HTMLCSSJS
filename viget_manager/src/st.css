@@ -8,7 +8,7 @@
 body{
   margin: 0 auto;
   background-color: var(--prymary);
-  max-width: 830px;
+  overflow: hidden;
   color: white;
   font-family: "Inter", sans-serif;
 }
@@ -28,19 +28,22 @@ margin-inline-end: 0px;
   cursor: pointer;
   height: 200px;
   background-color: var(--prymary2);
-  border: 1.3px #252525 solid;
+  border: 1.3px var(--prymary3) solid;
   padding: 16px;
     border-radius: 1rem;
 }
 
 .wrapper{
   padding: 3vw;
+  max-width: 830px;
+
+  margin: 0 auto;
 }
 .header{
   margin-top: 10px;
   padding: 5px 5px 5px 20px;
   display: flex;
-  border: 1.3px #252525 solid;
+  border: 1.3px var(--prymary3) solid;
   align-items: center;
   border-radius: 20px;
   justify-content: space-between;
@@ -53,7 +56,7 @@ button{
   padding: 10px 20px;
   background-color: var(--prymary);
   color: white;
-  border: 1.3px #252525 solid;
+  border: 1.3px var(--prymary3) solid;
   transition: all 0.3s ease;
 }
 
@@ -66,8 +69,12 @@ button:active{
 }
 
 .grid_viget{
+  max-height: 83vh;
+  margin-top: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
   gap: 1rem;
-  padding-top: 1rem;
   display: grid;
    grid-template-columns: repeat(3, 1fr);
 }
@@ -94,4 +101,133 @@ button:active{
 
 #time{
   font-size: 3.4rem;
+}
+.modal_open_choose_viget{
+  display: none;
+  padding-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  border-radius: 1rem;
+  border: 1.5px var(--prymary3) solid;
+  background-color: var(--prymary2);
+  transition: all 0.3s ease;
+}
+.content_modal{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.ymaps-2-1-79-copyrights-pane {
+    display: none;
+}
+#map > ymaps {
+    border-radius: 0.5vw;
+    overflow: hidden;
+    }
+.map_stiles{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* filter: grayscale(1);  */
+}
+
+/* From Uiverse.io by njesenberger */ 
+.toggle-container {
+  --active-color: #fff;
+
+  position: relative;
+  aspect-ratio: 292 / 142;
+  height: 1.875em;
+}
+
+.toggle-input {
+  appearance: none;
+  color: black;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.toggle {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.toggle-background {
+  fill: var(--prymary);
+  transition: fill .4s;
+}
+
+.toggle-input:checked + .toggle .toggle-background {
+  fill: var(--active-color);
+}
+
+.toggle-circle-center {
+  transform-origin: center;
+  transition: transform .6s;
+}
+
+.toggle-input:checked + .toggle .toggle-circle-center {
+  transform: translateX(150px);
+}
+
+.toggle-circle {
+  transform-origin: center;
+  transition: transform .45s;
+  backface-visibility: hidden;
+}
+
+.toggle-circle.left {
+  transform: scale(1);
+}
+
+.toggle-input:checked + .toggle .toggle-circle.left {
+  transform: scale(0);
+}
+
+.toggle-circle.right {
+  transform: scale(0);
+}
+
+.toggle-input:checked + .toggle .toggle-circle.right {
+  transform: scale(1);
+}
+
+.toggle-icon {
+  transition: fill .4s;
+}
+
+.toggle-icon.on {
+  fill: var(--prymary);
+}
+
+.toggle-input:checked + .toggle .toggle-icon.on {
+  fill: var(--prymary3);
+}
+
+.toggle-icon.off {
+  fill: var(--prymary3);
+}
+
+.toggle-input:checked + .toggle .toggle-icon.off {
+  fill: var(--active-color);
+}
+
+.themeviget{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}.timeviget{
+  display: flex;
+  justify-content: center;
 }

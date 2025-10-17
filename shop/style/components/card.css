@@ -1,0 +1,23 @@
+.cad_item{
+  cursor: pointer;
+
+  background-color: var(--prymary2);
+  border: 1.3px #252525 solid;
+  padding: 6px;
+    border-radius: 1rem;
+}
+.cad_item img{
+    border-radius: 0.6rem;
+    width: 100%;
+    object-fit: cover;
+}
+.ttpp{
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title{
+    padding-top: 8px;
+    font-size: 1.5rem;
+}

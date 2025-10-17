@@ -1,0 +1,1 @@
+export const ContainerOfVigets = document.querySelector('.grid_viget')

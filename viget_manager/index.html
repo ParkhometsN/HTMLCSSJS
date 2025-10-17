@@ -11,29 +11,22 @@
         <div class="header">
             <p>Dashboard viget</p>
             <div class="getviget">
-                <button>Добавить виджет</button>
+                <button id="get_viget">Добавить виджет</button>
             </div>
         </div>
         <div class="grid_viget">
-            <div id="weatherviget" class="backround_viget weatherviget">
-                <p style="opacity: 0.4;">сейчас</p>
-                <p style="color: palevioletred;" id="celsi"></p>
-                <div class="f"> <p id="city"> </p></div>
-               <p style="opacity: 0.5;">Ощущается как</p>
-                <p  style="color: palevioletred;" id="feels-like"></p>
-            </div>
-            <div class="backround_viget">
-                <p id="time"></p>
-            </div>
-            <div class="backround_viget">
-                <p>Погода</p>
-            </div>
-            <div class="backround_viget">
-                <p>Погода</p>
-            </div>
+            
         </div>
     </div>
-   
+    <div class="modal_open_choose_viget">
+        <div class="content_modal">
+            <button id="get_weather_button">Погода</button>
+            <button id="GetTime">Время</button>
+            <button id="GetTheme">Тема</button>
+            <button id="GetMap">Карты</button>
+        </div>
+    </div>
 </body>
-<script src="./src/js.js"></script>
+<script type="module" src="./src/js.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=fced4e6d-e59c-4721-8032-182e724cf2ec&lang=ru_RU"></script>
 </html>
