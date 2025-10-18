@@ -15,6 +15,6 @@ export function GetWeatherViget() {
 }
 
 function DeleteVigetHandle(){
-    const VigetWeather = document.getElementById('weatherviget')
-    VigetWeather.addEventListener('click', () => DeleteVidget(VigetWeather))
+  const VigetWeather = document.getElementById('weatherviget')
+  VigetWeather.addEventListener('click', () => DeleteVidget(VigetWeather))
 }

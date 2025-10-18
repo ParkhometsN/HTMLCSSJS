@@ -1,6 +1,8 @@
 import { ContainerOfVigets } from "../contains.js";
 import { DeleteVidget } from "./DeleteWidget.js";
 
+let checktheme = true; // ✅ Выносим переменную наружу
+
 export function GetThemeVidget() {
     const ThemeVidget = `
     <div id="themevidget" class="backround_viget themeviget">
@@ -24,25 +26,42 @@ export function GetThemeVidget() {
     </div>
   `;
     ContainerOfVigets.insertAdjacentHTML('beforeend', ThemeVidget);
-    DeleteVigetHandle()
-    localStorage.setItem('themeviget',ContainerOfVigets)
-    
+    DeleteVigetHandle();
+    localStorage.setItem('themeviget', ContainerOfVigets);
 
-    ChangeColorPage()
-    function ChangeColorPage(){
-        const ButtonTheme = document.querySelector('.toggle-input')
-        ButtonTheme.addEventListener('click', function(event){
-            event.stopPropagation();
-            document.documentElement.style.setProperty('--prymary', '#ffffffff'); // Новый цвет для --prymary
-            document.documentElement.style.setProperty('--prymary2', '#f3f3f3bb'); // Новый цвет для --prymary2
-            document.documentElement.style.setProperty('--prymary3', '#cececeff');
-            document.body.style.color = "black"
-            document.button.style.color = "black"
-        })
-    }
+    ChangeColorPage();
 }
 
-function DeleteVigetHandle(){
-    const VigetTheme = document.getElementById('themevidget')
-    VigetTheme.addEventListener('click', () => DeleteVidget(VigetTheme))
+function ChangeColorPage() {
+    const ButtonTheme = document.querySelector('.toggle-input');
+    ButtonTheme.replaceWith(ButtonTheme.cloneNode(true));
+    const newButtonTheme = document.querySelector('.toggle-input');
+    
+    newButtonTheme.addEventListener('click', function(event) {
+        event.stopPropagation();
+        
+        if (!checktheme) {
+            // Тёмная тема
+            document.documentElement.style.setProperty('--prymary', '#171717');
+            document.documentElement.style.setProperty('--prymary2', '#1D1D1D');
+            document.documentElement.style.setProperty('--prymary3', '#252525');
+            document.body.style.color = "white";
+            document.querySelector('.mybutton').style.color = 'white'
+        } else {
+            // Светлая тема
+            document.documentElement.style.setProperty('--prymary', '#f4f4f4ff');
+            document.documentElement.style.setProperty('--prymary2', '#ffffffbb');
+            document.documentElement.style.setProperty('--prymary3', '#eaeaeaff');
+            document.body.style.color = "black";
+            document.querySelector('.mybutton').style.color = 'black'
+        }
+        
+        checktheme = !checktheme;
+        console.log('Тема изменена:', checktheme ? 'светлая' : 'тёмная'); // Для отладки
+    });
+}
+
+function DeleteVigetHandle() {
+    const VigetTheme = document.getElementById('themevidget');
+    VigetTheme.addEventListener('click', () => DeleteVidget(VigetTheme));
 }

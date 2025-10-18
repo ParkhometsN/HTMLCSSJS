@@ -15,16 +15,43 @@ function AddNewViget(){
   isvisible = !isvisible
   CloseOpenText = !CloseOpenText
 }
-
 // виджет погоды
 const ButtonGetWeather = document.getElementById('get_weather_button')
-ButtonGetWeather.addEventListener('click', GetWeatherViget)
+ButtonGetWeather.addEventListener('click', function(){
+  const VigetWeather = document.getElementById('weatherviget')
+  if (!VigetWeather){
+    GetWeatherViget()
+  }else{
+    AlertError('Нельзя создовать несколько виджетово одного типа')
+  }
+})
 //виджет времени
 const ButtonGetTime = document.getElementById('GetTime');
-ButtonGetTime.addEventListener('click', GetTimeViget)
+ButtonGetTime.addEventListener('click',function(){
+   const VigetTime = document.getElementById('TimeViget')
+  if (!VigetTime){
+    GetTimeViget()
+  }else{
+    AlertError('Нельзя создовать несколько виджетово одного типа')
+  }
+})
 //виджет темы
 const ButtonGetTheme = document.getElementById('GetTheme');
-ButtonGetTheme.addEventListener('click', GetThemeVidget)
+ButtonGetTheme.addEventListener('click', function(){
+   const VigetTheme = document.getElementById('themevidget')
+   if (!VigetTheme){
+    GetThemeVidget()
+   }else{
+    AlertError('Нельзя создовать несколько виджетово одного типа')
+   }
+})
 // виджет карты
 const ButtonGetMap = document.getElementById('GetMap');
-ButtonGetMap.addEventListener('click', GetYandexMap)
+ButtonGetMap.addEventListener('click', function(){
+  const VigetMap = document.getElementById('MapViget')
+  if (!VigetMap){
+    GetYandexMap()
+  }else{
+    AlertError('Нельзя создовать несколько виджетово одного типа')
+  }
+})

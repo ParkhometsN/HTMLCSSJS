@@ -10,17 +10,6 @@ export function GetYandexMap() {
     `;
     ContainerOfVigets.insertAdjacentHTML('beforeend', YaMapHtml);
 
-    const mapElement = document.getElementById('map');
-    if (!mapElement) {
-        AlertError('Ошибка: не удалось создать элемент карты');
-        return;
-    }
-
-    if (typeof ymaps === 'undefined') {
-        AlertError('Ошибка: библиотека Yandex Maps не загружена');
-        return;
-    }
-
     ymaps.ready(init);
     function init() {
         var myMap = new ymaps.Map("map", {
