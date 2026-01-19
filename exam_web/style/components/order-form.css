@@ -1,0 +1,42 @@
+.order-container{
+    background-color: var(--prymary2);
+    border-radius: 20px;
+    padding: 16px;
+    width: 100%;
+    border: 1.3px #252525 solid;
+    height: 150px;
+}
+.basketlist{
+    padding-top: 40px;
+    display: flex;
+    gap: 16px;
+}
+.order-content{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+.price-time{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.coocking{
+        display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.oreder-button_bocok{
+    display: flex;
+    justify-content: space-between ;
+}
+.itme_order{
+    padding: 8px;
+}
+.foodcard{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

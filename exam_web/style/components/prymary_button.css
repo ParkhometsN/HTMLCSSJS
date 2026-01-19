@@ -1,0 +1,17 @@
+button{
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 16px;
+  padding: 10px 20px;
+  background-color: var(--prymary);
+  color: white;
+  border: 1.3px #252525 solid;
+  transition: all 0.3s ease;
+}
+button:hover{
+    background-color: var(--prymary2);
+}
+
+button:active{
+      background-color: var(--prymary);
+}

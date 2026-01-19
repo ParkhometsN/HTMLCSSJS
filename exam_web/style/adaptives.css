@@ -1,0 +1,22 @@
+@media (max-width: 983px) {
+    .grid_food{
+  gap: 1rem;
+  padding-top: 1rem;
+  display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+.order-content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+}
+@media (max-width: 483px) {
+        .grid_food{
+    gap: 1rem;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
