@@ -53,3 +53,12 @@ margin-inline-end: 0px;
     border-radius: 20px;
     border: 1.3px #252525 solid;
 }
+
+.cad_item img{
+  height: 200px;
+}
+.cad_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
